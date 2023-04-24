@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <title>U-demy exercises</title>
+    </head>
+</html>
+
+<body>
+    <p id = "demo"></p>
+    <p id = "output"></p>
+    <p id = "text"></p>
+    <p id = "backslash"></p>
+    <p id = "math"></p>
+    <p id = "min"></p>
+    <p id = "round"></p>
+    <p id = "array"></p>
+    <p id = "splice"></p>
+    <p id = "liquids"></p>
+    <p id = "join"></p>
+
+
+    <script>
+        var car = {type: "Acura", model: "Integra", color: "Black", weight: 150}
+        document.getElementById ("demo").innerHTML = car.weight
+
+        var person = {firstName: "John", lastName: "Smith", age: 30, eyesColor: "blue"}
+        document.getElementById ("output").innerHTML = person.firstName + " has " + person.eyesColor + " eyes"
+
+        var name = "Delia Maria Dodenciu"
+        document.getElementById ("text").innerHTML = name.length      //.length is a property which returns the number of characters in a string
+
+        var quotes = "They are the best \"players\" in the country"    //use \ before the quotes, otherwhise it will return nothing
+        document.getElementById ("backslash").innerHTML = quotes
+
+        document.getElementById ("math").innerHTML = Math.random()    //Math.random() is a function that returns random numbers between 0 and 1
+
+        document.getElementById ("min").innerHTML = Math.min (600, 300, 50, 75, -5, -150)  //returns the smallest value and Math.max returns the biggest value
+
+        document.getElementById ("round").innerHTML = Math.round (15.7)   //below .5 rounds to smaller and upper .5 rounds to bigger and instead of round, we cand use .floor (to round down) or .ceil (to round up)
+    
+        var fruits = ["Apple", "Oranges", "Pears", "Grapes", "Strawberries", "Mango"]  //this is an array
+        document.getElementById ("array").innerHTML = fruits[3]    //returs the value from the third position - Grapes (remember that the positions, called also index, starts with 0)
+        
+        fruits.splice(2, 0, "Lemon", "Banana");      //specifies that we want the new elements to start with index number 2 and we don't want to remove any other elements of the array
+        document.getElementById ("splice").innerHTML = fruits //the output is the array after we used .splice() function
+
+
+        var drinks = ["Whiskey", "Red Bull", "Lemonade", "Cola", "Wine"]
+        drinks.sort();  //.sort is used to sort from A to Z and .reverse is used to sort from Z to A 
+        document.getElementById ("liquids").innerHTML = drinks
+
+        var girls = ["Julie", "Samanta", "Zoe", "Max"]
+        var boys = ["John", "Anthony", "Mark", "Sam"]
+        var combined = girls.concat(boys)
+        document.getElementById ("join").innerHTML = combined
+
+
+    </script>
+</body>

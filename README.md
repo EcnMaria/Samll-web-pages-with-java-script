@@ -1,1 +1,1 @@
-# Samll-web-pages-with-java-script
+# Small-web-pages-with-java-script
